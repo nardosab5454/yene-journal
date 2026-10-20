@@ -1,0 +1,24 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PublicPage } from "@/components/site-chrome";
+
+export const Route = createFileRoute("/terms")({
+  head: () => ({
+    meta: [
+      { title: "Terms of service — Yene Journal" },
+      { name: "description", content: "Terms for using Yene Journal." },
+      { property: "og:title", content: "Terms of service — Yene Journal" },
+      { property: "og:description", content: "Terms for using Yene Journal." },
+    ],
+  }),
+  component: () => (
+    <PublicPage>
+      <article className="mx-auto max-w-3xl space-y-4 px-4 py-20 text-muted-foreground">
+        <h1 className="text-4xl font-bold text-foreground">Terms of service</h1>
+        <p>Draft — to be reviewed by a legal professional before launch.</p>
+        <p>Yene Journal provides tools to record and analyze your own trading activity. It is not a broker, exchange or investment adviser, and nothing in the service is financial advice.</p>
+        <p>You are responsible for the accuracy of the data you enter and for keeping your login secure. We may suspend accounts that abuse the service.</p>
+        <p>The service is provided "as is" without warranties. Paid plans, when available, renew until cancelled.</p>
+      </article>
+    </PublicPage>
+  ),
+});
